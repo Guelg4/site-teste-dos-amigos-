@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Irmãos de mães diferentes</h1>
+        <p>Um site para demonstrar meu amor por vocês</p>
+    </header>
+
+    <section class="apresentacao">
+        <h2>Bem-vindo!</h2>
+        <p>Amo todos vocês, exceto ketylle, e quero levar vocês para a minha vida.</p>
+        <p>Vou deixar registrado algumas fotos aqui.</p>
+    </section>
+
+    <section class="galeria-section">
+        <h2>Nossas fotos</h2>
+
+        <div class="galeria">
+            <img src="imagens/foto1.jpg" alt="Foto 1" onclick="abrirImagem(this.src)">
+            <img src="imagens/foto2.jpg" alt="Foto 2" onclick="abrirImagem(this.src)">
+            <img src="imagens/foto3.jpg" alt="Foto 3" onclick="abrirImagem(this.src)">
+            <img src="imagens/foto4.jpg" alt="Foto 4" onclick="abrirImagem(this.src)">
+            <img src="imagens/foto5.jpg" alt="Foto 5" onclick="abrirImagem(this.src)">
+            <img src="imagens/foto6.jpg" alt="Foto 6" onclick="abrirImagem(this.src)">
+        </div>
+    </section>
+
+    <div id="modal" class="modal" onclick="fecharImagem()">
+        <img id="imagem-grande" class="modal-conteudo">
+    </div>
+
+    <footer>
+        <p>© 2026 - Meu Site</p>
+    </footer>
+
+    <script>
+        function abrirImagem(src) {
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("imagem-grande").src = src;
+        }
+
+        function fecharImagem() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
